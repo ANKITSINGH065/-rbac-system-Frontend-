@@ -50,6 +50,7 @@ const App = () => {
       <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center space-y-6">
         {message && <div className="text-red-500">{message}</div>}
         <Routes>
+        <Route path="/" element={<Navigate to={user ? "/dashboard" : "/login"} />} /> 
           <Route path="/register" element={
             user ? <Navigate to="/dashboard" /> : (
               <>
